@@ -154,12 +154,6 @@ input[type=search]:hover,input[type=search]:focus,input[type=search]:active  {
 
 /* MEDIA QUERIES */
 @media only screen and (min-width: 268px) and (max-width: 659px){
-  html,body
-  {
-      margin: 0px;
-      padding: 0px;
-      overflow-x: hidden; 
-  }
   .content-wrapper{
     display: flex;
     justify-content: center;
@@ -167,6 +161,10 @@ input[type=search]:hover,input[type=search]:focus,input[type=search]:active  {
     color: #f5f5f5;
     gap: 0px;
     padding: 8px 16px;
+  }
+  input[type=search] {
+    line-height: 1;
+  
   }
   .content-wrapper .left{
     flex-shrink: 2;
