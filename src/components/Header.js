@@ -1,5 +1,5 @@
 import Icon from '../assets/cloud.png'
-
+import '../styles.css'
 export const headerComponent = () =>{
   const header = createDomElement('header')
   addClassName(header, 'header-wrapper');
