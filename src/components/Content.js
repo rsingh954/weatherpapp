@@ -29,7 +29,7 @@ export const hourlyContent = (temperature,desc, icon, t) =>{
   const wrapper = document.createElement('div')
   wrapper.classList.add('h-wrap')
 
-  const time = document.createElement('h3')
+  const time = document.createElement('h5')
   time.classList.add('h-temp')
   time.textContent = t
   

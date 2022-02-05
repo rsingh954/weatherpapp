@@ -36,11 +36,35 @@ const formatTime = (dt) =>{
   return time
 }
 
-hourly.forEach((hour, i) => {
-  const temp = Math.round(hour.temp)
-  const description = hour.weather[0].description
-  const icon = hour.weather[0].icon
-  const time = formatTime(hour.dt)
-  hourlyContent(temp, description, icon, time)
-})
+  hourly.forEach((hour, i) => {
+    const temp = Math.round(hour.temp)
+    const description = hour.weather[0].description
+    const icon = hour.weather[0].icon
+    const time = formatTime(hour.dt)
+    hourlyContent(temp, description, icon, time)
+  })  
 
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+} 
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+} 

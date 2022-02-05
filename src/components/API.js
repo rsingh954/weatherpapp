@@ -19,7 +19,12 @@ const formatD = (dt) =>{
 export async function api(q=94066){
   let data =  await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${q}&units=imperial&APPID=${API_KEY}`, {mode: "cors"})
 
-  if(data.status !== 200) return 
+  if(data.status !== 200) {
+  // Get the modal
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+    return
+  } 
 
   try{
     let respone = await data.json()
