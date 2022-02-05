@@ -58,6 +58,15 @@ export async function getHourly(coordinates){
   console.log(response)
   const hourly =response.hourly 
   localStorage.setItem('hourly', JSON.stringify(hourly))
+  
+  hourly.forEach((hour, i) => {
+    const temp = Math.round(hour.temp)
+    const description = hour.weather[0].description
+    const icon = hour.weather[0].icon
+    const time = formatTime(hour.dt)
+    hourlyContent(temp, description, icon, time)
+  })
+  
   return hourly
 }
 
